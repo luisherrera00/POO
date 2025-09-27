@@ -32,6 +32,20 @@ public class Departamento {
         }
     }
 
+  // Sobrecarga: agregar empleado temporal directamente con datos
+    
+    public void agregarEmpleado(String cedula, String nombre, String email, String telefono,
+                               String idEmpleado, String fechaIngreso, double salario, String cargo, String estado,
+                               String fechaFinContrato, String tipoContrato, int horasTrabajadas) throws Exception {
+        EmpleadoTemporal nuevo = new EmpleadoTemporal(
+            cedula, nombre, email, telefono,
+            idEmpleado, fechaIngreso, salario, cargo, estado,
+            fechaFinContrato, tipoContrato, horasTrabajadas
+        );
+        agregarEmpleado(nuevo);
+    }
+    
+    
     public void removerEmpleado(Empleado empleado) {
         empleados.remove(empleado);
     }
@@ -42,3 +56,4 @@ public class Departamento {
         }
     }
 }
+
