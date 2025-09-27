@@ -17,7 +17,8 @@ public class Main {
         VistaConsola vista = new VistaConsola();
         ControladorPrincipal controlador = new ControladorPrincipal();
 
-// === Agregar usuarios de prueba ===
+//Usuario: ana Contraseña: 1234 Usuario: luis Contraseña: abcd
+
         compuwork.models.SistemaAutenticacion sistema = compuwork.models.SistemaAutenticacion.getInstancia();
         sistema.agregarUsuario(new Usuario("12345678", "Ana Pérez", "ana@correo.com", "555-1234", "ana", "1234", "Administrador"));
         sistema.agregarUsuario(new Usuario("87654321", "Luis Gómez", "luis@correo.com", "555-5678", "luis", "abcd", "Empleado"));
@@ -35,4 +36,5 @@ public class Main {
             }
         }
     }
+
 }
